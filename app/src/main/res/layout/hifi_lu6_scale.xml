@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- STATUS BAR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:background="#1B5E20"
+            android:paddingHorizontal="16dp"
+            android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="9:41" android:textSize="11sp" android:textColor="#FFFFFF"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LTE  100%" android:textSize="11sp" android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <!-- TOP BAR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_top_bar"
+            android:paddingHorizontal="16dp"
+            android:gravity="center_vertical">
+            <TextView android:layout_width="36dp" android:layout_height="36dp" android:text="PC" android:textSize="14sp" android:textStyle="bold" android:gravity="center" android:textColor="#2E7D32" android:background="@drawable/bg_circle_icon" android:contentDescription="PocketCampus logo"/>
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="  PocketCampus" android:textSize="18sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+            <TextView android:layout_width="36dp" android:layout_height="36dp" android:text="🔔" android:textSize="16sp" android:gravity="center" android:contentDescription="Notifications"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- SMALL: Greeting text (smallest scale) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Good Morning, Thabo 👋"
+                android:textSize="13sp"
+                android:textColor="#757575"
+                android:contentDescription="Greeting message"/>
+
+            <!-- LARGE: Budget amount (biggest scale = most important) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_primary_button"
+                android:padding="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Main budget card showing remaining balance of R2450">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remaining This Month"
+                    android:textSize="12sp"
+                    android:textColor="#C8E6C9"/>
+
+                <!-- LARGEST element on screen = Scale principle -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R 2,450"
+                    android:textSize="44sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="12dp">
+                    <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_progress_bar_track"/>
+                    <View android:layout_width="180dp" android:layout_height="match_parent" android:background="@drawable/bg_progress_bar_fill" android:backgroundTint="#FFFFFF"/>
+                </FrameLayout>
+
+                <!-- SMALL: Supporting text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R 1,550 of R 4,000 spent (39%)"
+                    android:textSize="11sp"
+                    android:textColor="#C8E6C9"
+                    android:layout_marginTop="6dp"/>
+            </LinearLayout>
+
+            <!-- MEDIUM: Section heading (middle scale) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spending by Category"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- MEDIUM: Category cards -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card"
+                android:padding="14dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical"
+                android:contentDescription="Food category: R600 spent of R1000 budget">
+                <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="🍔" android:textSize="18sp" android:gravity="center" android:background="@drawable/bg_circle_icon"/>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <!-- MEDIUM text -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Food" android:textSize="15sp" android:textStyle="bold" android:textColor="#212121"/>
+                    <!-- SMALL text -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="R 600 of R 1,000" android:textSize="11sp" android:textColor="#757575"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="60%" android:textSize="14sp" android:textStyle="bold" android:textColor="#F57C00"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card"
+                android:padding="14dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical"
+                android:contentDescription="Transport category: R300 spent of R500 budget">
+                <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="🚌" android:textSize="18sp" android:gravity="center" android:background="@drawable/bg_circle_icon"/>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Transport" android:textSize="15sp" android:textStyle="bold" android:textColor="#212121"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="R 300 of R 500" android:textSize="11sp" android:textColor="#757575"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="60%" android:textSize="14sp" android:textStyle="bold" android:textColor="#F57C00"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card"
+                android:padding="14dp"
+                android:gravity="center_vertical"
+                android:contentDescription="Books category: R150 spent of R300 budget">
+                <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="📚" android:textSize="18sp" android:gravity="center" android:background="@drawable/bg_circle_icon"/>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Books" android:textSize="15sp" android:textStyle="bold" android:textColor="#212121"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="R 150 of R 300" android:textSize="11sp" android:textColor="#757575"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="50%" android:textSize="14sp" android:textStyle="bold" android:textColor="#2E7D32"/>
+            </LinearLayout>
+
+            <!-- SMALLEST: Footer -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last updated: Today, 9:41 AM"
+                android:textSize="10sp"
+                android:textColor="#BDBDBD"
+                android:gravity="center"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+
+        <!-- BOTTOM NAV -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_bottom_nav"
+            android:orientation="horizontal">
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:contentDescription="Home tab selected">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏠" android:textSize="20sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Home" android:textSize="10sp" android:textStyle="bold" android:textColor="#2E7D32"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:contentDescription="Expenses tab">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💰" android:textSize="20sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Expenses" android:textSize="10sp" android:textColor="#757575"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:contentDescription="Add expense">
+                <TextView android:layout_width="44dp" android:layout_height="44dp" android:text="+" android:textSize="24sp" android:textStyle="bold" android:gravity="center" android:textColor="#FFFFFF" android:background="@drawable/bg_primary_button"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:contentDescription="Deals tab">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏷" android:textSize="20sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Deals" android:textSize="10sp" android:textColor="#757575"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:contentDescription="Reports tab">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📊" android:textSize="20sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reports" android:textSize="10sp" android:textColor="#757575"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

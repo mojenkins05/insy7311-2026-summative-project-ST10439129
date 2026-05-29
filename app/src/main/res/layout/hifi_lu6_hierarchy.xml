@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="28dp" android:background="#1B5E20" android:paddingHorizontal="16dp" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="9:41" android:textSize="11sp" android:textColor="#FFFFFF"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LTE  100%" android:textSize="11sp" android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:background="@drawable/bg_top_bar" android:paddingHorizontal="16dp" android:gravity="center_vertical">
+            <TextView android:layout_width="36dp" android:layout_height="36dp" android:text="‹" android:textSize="24sp" android:gravity="center" android:textColor="#FFFFFF" android:contentDescription="Back button"/>
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Expenses" android:textSize="18sp" android:textStyle="bold" android:gravity="center" android:textColor="#FFFFFF"/>
+            <TextView android:layout_width="36dp" android:layout_height="36dp" android:text="🔍" android:textSize="16sp" android:gravity="center" android:contentDescription="Search expenses"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- LEVEL 1: Page title (largest) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Expenses"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#212121"/>
+
+            <!-- LEVEL 2: Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="May 2026 · Total: R 1,550.00"
+                android:textSize="14sp"
+                android:textColor="#757575"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- LEVEL 2: Summary card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Monthly spending summary">
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="R 1,550" android:textSize="20sp" android:textStyle="bold" android:textColor="#D32F2F"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Spent" android:textSize="11sp" android:textColor="#757575"/>
+                </LinearLayout>
+                <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E0E0E0"/>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="R 2,450" android:textSize="20sp" android:textStyle="bold" android:textColor="#2E7D32"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Remaining" android:textSize="11sp" android:textColor="#757575"/>
+                </LinearLayout>
+                <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#E0E0E0"/>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12" android:textSize="20sp" android:textStyle="bold" android:textColor="#212121"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Items" android:textSize="11sp" android:textColor="#757575"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Filter chips -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="32dp" android:text="  All  " android:textSize="12sp" android:gravity="center" android:textColor="#FFFFFF" android:background="@drawable/bg_chip_selected" android:paddingHorizontal="14dp" android:layout_marginEnd="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="32dp" android:text="  Food  " android:textSize="12sp" android:gravity="center" android:textColor="#757575" android:background="@drawable/bg_chip_unselected" android:paddingHorizontal="14dp" android:layout_marginEnd="6dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="32dp" android:text="  Transport  " android:textSize="12sp" android:gravity="center" android:textColor="#757575" android:background="@drawable/bg_chip_unselected" android:paddingHorizontal="14dp"/>
+            </LinearLayout>
+
+            <!-- LEVEL 3: Date header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TODAY"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#757575"
+                android:layout_marginBottom="6dp"/>
+
+            <!-- LEVEL 4: Expense item (title bold, detail lighter) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card"
+                android:padding="14dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical"
+                android:contentDescription="Expense: Chicken Sandwich, R45, Food category">
+                <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="🍔" android:textSize="18sp" android:gravity="center" android:background="@drawable/bg_circle_icon"/>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <!-- LEVEL 4a: Item name (bold) -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chicken Sandwich" android:textSize="14sp" android:textStyle="bold" android:textColor="#212121"/>
+                    <!-- LEVEL 5: Supporting detail (smallest, lightest) -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Food · 12:30 PM" android:textSize="11sp" android:textColor="#757575"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="- R 45.00" android:textSize="15sp" android:textStyle="bold" android:textColor="#D32F2F"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card"
+                android:padding="14dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:contentDescription="Expense: Bus Fare, R20, Transport category">
+                <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="🚌" android:textSize="18sp" android:gravity="center" android:background="@drawable/bg_circle_icon"/>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bus Fare to Campus" android:textSize="14sp" android:textStyle="bold" android:textColor="#212121"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Transport · 08:15 AM" android:textSize="11sp" android:textColor="#757575"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="- R 20.00" android:textSize="15sp" android:textStyle="bold" android:textColor="#D32F2F"/>
+            </LinearLayout>
+
+            <!-- Another date header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YESTERDAY"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#757575"
+                android:layout_marginBottom="6dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card"
+                android:padding="14dp"
+                android:gravity="center_vertical"
+                android:contentDescription="Expense: Notebook, R80, Books category">
+                <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="📚" android:textSize="18sp" android:gravity="center" android:background="@drawable/bg_circle_icon"/>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Notebook" android:textSize="14sp" android:textStyle="bold" android:textColor="#212121"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Books · 03:45 PM" android:textSize="11sp" android:textColor="#757575"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="- R 80.00" android:textSize="15sp" android:textStyle="bold" android:textColor="#D32F2F"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- BOTTOM NAV -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_bottom_nav"
+            android:orientation="horizontal">
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:contentDescription="Home tab">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏠" android:textSize="20sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Home" android:textSize="10sp" android:textColor="#757575"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:contentDescription="Expenses tab selected">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💰" android:textSize="20sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Expenses" android:textSize="10sp" android:textStyle="bold" android:textColor="#2E7D32"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:contentDescription="Add expense">
+                <TextView android:layout_width="44dp" android:layout_height="44dp" android:text="+" android:textSize="24sp" android:textStyle="bold" android:gravity="center" android:textColor="#FFFFFF" android:background="@drawable/bg_primary_button"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:contentDescription="Deals tab">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏷" android:textSize="20sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Deals" android:textSize="10sp" android:textColor="#757575"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:contentDescription="Reports tab">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📊" android:textSize="20sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reports" android:textSize="10sp" android:textColor="#757575"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

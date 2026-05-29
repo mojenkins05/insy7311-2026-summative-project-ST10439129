@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- SAME STATUS BAR (consistency) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:background="#1B5E20"
+            android:paddingHorizontal="16dp"
+            android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="9:41" android:textSize="11sp" android:textColor="#FFFFFF"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LTE  100%" android:textSize="11sp" android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <!-- SAME TOP BAR STYLE (consistency) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_top_bar"
+            android:paddingHorizontal="16dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:text="‹"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:contentDescription="Back button"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Student Deals"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#FFFFFF"/>
+            <TextView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:text="🔍"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:contentDescription="Search deals"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- SAME title style as other screens (consistency) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deals Near You"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginBottom="4dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save money with these student discounts"
+                android:textSize="13sp"
+                android:textColor="#757575"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- SAME filter chip style (consistency) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text="  All  "
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/bg_chip_selected"
+                    android:layout_marginEnd="6dp"
+                    android:paddingHorizontal="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text="  Food  "
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="#757575"
+                    android:background="@drawable/bg_chip_unselected"
+                    android:layout_marginEnd="6dp"
+                    android:paddingHorizontal="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text="  Coffee  "
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="#757575"
+                    android:background="@drawable/bg_chip_unselected"
+                    android:layout_marginEnd="6dp"
+                    android:paddingHorizontal="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text="  Books  "
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="#757575"
+                    android:background="@drawable/bg_chip_unselected"
+                    android:paddingHorizontal="12dp"/>
+            </LinearLayout>
+
+            <!-- SAME card style as expense list (consistency) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card"
+                android:padding="14dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:contentDescription="Deal: 20 percent off at Steers with student card">
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="🍔"
+                    android:textSize="22sp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_circle_icon"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Steers" android:textSize="15sp" android:textStyle="bold" android:textColor="#212121"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20% off with student card" android:textSize="12sp" android:textColor="#757575"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="500m away · Expires 30 Jun" android:textSize="10sp" android:textColor="#BDBDBD"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text=" Claim "
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/bg_primary_button"
+                    android:paddingHorizontal="14dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card"
+                android:padding="14dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:contentDescription="Deal: Buy 1 get 1 free at Vida e Caffe">
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="☕"
+                    android:textSize="22sp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_circle_icon"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Vida e Caffè" android:textSize="15sp" android:textStyle="bold" android:textColor="#212121"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Buy 1 Get 1 Free on Tuesdays" android:textSize="12sp" android:textColor="#757575"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="On campus · Every Tuesday" android:textSize="10sp" android:textColor="#BDBDBD"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text=" Claim "
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/bg_primary_button"
+                    android:paddingHorizontal="14dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_card"
+                android:padding="14dp"
+                android:gravity="center_vertical"
+                android:contentDescription="Deal: 15 percent off textbooks at Exclusive Books">
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="📚"
+                    android:textSize="22sp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_circle_icon"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Exclusive Books" android:textSize="15sp" android:textStyle="bold" android:textColor="#212121"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="15% off all textbooks" android:textSize="12sp" android:textColor="#757575"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1.2km away · Ongoing" android:textSize="10sp" android:textColor="#BDBDBD"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text=" Claim "
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/bg_primary_button"
+                    android:paddingHorizontal="14dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- SAME BOTTOM NAV (consistency) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_bottom_nav"
+            android:orientation="horizontal">
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:contentDescription="Home tab">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏠" android:textSize="20sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Home" android:textSize="10sp" android:textColor="#757575"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:contentDescription="Expenses tab">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💰" android:textSize="20sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Expenses" android:textSize="10sp" android:textColor="#757575"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:contentDescription="Add expense">
+                <TextView android:layout_width="44dp" android:layout_height="44dp" android:text="+" android:textSize="24sp" android:textStyle="bold" android:gravity="center" android:textColor="#FFFFFF" android:background="@drawable/bg_primary_button"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:contentDescription="Deals tab, currently selected">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏷" android:textSize="20sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Deals" android:textSize="10sp" android:textStyle="bold" android:textColor="#2E7D32"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:contentDescription="Reports tab">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📊" android:textSize="20sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reports" android:textSize="10sp" android:textColor="#757575"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

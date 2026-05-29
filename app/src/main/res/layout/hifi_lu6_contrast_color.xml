@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="28dp" android:background="#1B5E20" android:paddingHorizontal="16dp" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="9:41" android:textSize="11sp" android:textColor="#FFFFFF"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LTE  100%" android:textSize="11sp" android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:background="@drawable/bg_top_bar" android:paddingHorizontal="16dp" android:gravity="center_vertical">
+            <TextView android:layout_width="36dp" android:layout_height="36dp" android:text="‹" android:textSize="24sp" android:gravity="center" android:textColor="#FFFFFF" android:contentDescription="Back button"/>
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Budget Planner" android:textSize="18sp" android:textStyle="bold" android:gravity="center" android:textColor="#FFFFFF"/>
+            <TextView android:layout_width="36dp" android:layout_height="36dp" android:text="✏" android:textSize="16sp" android:gravity="center" android:contentDescription="Edit budget"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- WARNING BANNER: High contrast red -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_error_card"
+                android:padding="14dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Warning: 1 category is over budget">
+                <TextView android:layout_width="32dp" android:layout_height="32dp" android:text="⚠" android:textSize="16sp" android:gravity="center" android:textColor="#FFFFFF" android:background="@drawable/bg_delete_button"/>
+                <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Budget Alert" android:textSize="14sp" android:textStyle="bold" android:textColor="#D32F2F"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1 category has exceeded its limit" android:textSize="12sp" android:textColor="#D32F2F"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Your Categories" android:textSize="17sp" android:textStyle="bold" android:textColor="#212121" android:layout_marginBottom="10dp"/>
+
+            <!-- OVER BUDGET: RED contrast -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_error_card"
+                android:padding="14dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="Food category: over budget, R850 spent of R600 limit">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="🍔" android:textSize="18sp" android:gravity="center" android:background="@drawable/bg_circle_icon"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Food" android:textSize="15sp" android:textStyle="bold" android:textColor="#D32F2F"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="R 850 of R 600 · OVER BUDGET" android:textSize="11sp" android:textColor="#D32F2F"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="142%" android:textSize="16sp" android:textStyle="bold" android:textColor="#D32F2F"/>
+                </LinearLayout>
+                <FrameLayout android:layout_width="match_parent" android:layout_height="6dp" android:layout_marginTop="10dp">
+                    <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_progress_bar_track"/>
+                    <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_progress_bar_danger"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- WARNING: ORANGE contrast -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_warning_card"
+                android:padding="14dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="Transport category: nearing limit, R400 spent of R500">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="🚌" android:textSize="18sp" android:gravity="center" android:background="@drawable/bg_circle_icon"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Transport" android:textSize="15sp" android:textStyle="bold" android:textColor="#F57C00"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="R 400 of R 500 · ALMOST FULL" android:textSize="11sp" android:textColor="#F57C00"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="80%" android:textSize="16sp" android:textStyle="bold" android:textColor="#F57C00"/>
+                </LinearLayout>
+                <FrameLayout android:layout_width="match_parent" android:layout_height="6dp" android:layout_marginTop="10dp">
+                    <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_progress_bar_track"/>
+                    <View android:layout_width="260dp" android:layout_height="match_parent" android:background="@drawable/bg_progress_bar_fill" android:backgroundTint="#F57C00"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- UNDER BUDGET: GREEN contrast -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_success_card"
+                android:padding="14dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="Books category: under budget, R150 spent of R300">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="📚" android:textSize="18sp" android:gravity="center" android:background="@drawable/bg_circle_icon"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Books" android:textSize="15sp" android:textStyle="bold" android:textColor="#2E7D32"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="R 150 of R 300 · ON TRACK" android:textSize="11sp" android:textColor="#388E3C"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="50%" android:textSize="16sp" android:textStyle="bold" android:textColor="#2E7D32"/>
+                </LinearLayout>
+                <FrameLayout android:layout_width="match_parent" android:layout_height="6dp" android:layout_marginTop="10dp">
+                    <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_progress_bar_track"/>
+                    <View android:layout_width="160dp" android:layout_height="match_parent" android:background="@drawable/bg_progress_bar_fill"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_success_card"
+                android:padding="14dp"
+                android:contentDescription="Entertainment category: under budget, R50 spent of R200">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="40dp" android:layout_height="40dp" android:text="🎮" android:textSize="18sp" android:gravity="center" android:background="@drawable/bg_circle_icon"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Entertainment" android:textSize="15sp" android:textStyle="bold" android:textColor="#2E7D32"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="R 50 of R 200 · ON TRACK" android:textSize="11sp" android:textColor="#388E3C"/>
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="25%" android:textSize="16sp" android:textStyle="bold" android:textColor="#2E7D32"/>
+                </LinearLayout>
+                <FrameLayout android:layout_width="match_parent" android:layout_height="6dp" android:layout_marginTop="10dp">
+                    <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_progress_bar_track"/>
+                    <View android:layout_width="80dp" android:layout_height="match_parent" android:background="@drawable/bg_progress_bar_fill"/>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

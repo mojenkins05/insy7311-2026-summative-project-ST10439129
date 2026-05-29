@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- STATUS BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:background="#1B5E20"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical">
+        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="9:41" android:textSize="11sp" android:textColor="#FFFFFF"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LTE  100%" android:textSize="11sp" android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+    <!-- TOP BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_top_bar"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical">
+        <View android:layout_width="36dp" android:layout_height="36dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Complete"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#FFFFFF"/>
+        <View android:layout_width="36dp" android:layout_height="36dp"/>
+    </LinearLayout>
+
+    <!-- CENTER CONTENT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp">
+
+        <!-- Success circle -->
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="✓"
+            android:textSize="44sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/bg_primary_button"
+            android:contentDescription="Success checkmark icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expense Added!"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your expense has been saved to your account."
+            android:textSize="14sp"
+            android:textColor="#757575"
+            android:gravity="center"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Summary card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="16dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="Summary of saved expense">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Category" android:textSize="12sp" android:textColor="#757575"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Food" android:textSize="13sp" android:textStyle="bold" android:textColor="#212121"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" android:layout_marginBottom="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Amount" android:textSize="12sp" android:textColor="#757575"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="R 45.00" android:textSize="13sp" android:textStyle="bold" android:textColor="#212121"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" android:layout_marginBottom="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Date" android:textSize="12sp" android:textColor="#757575"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="29 May 2026" android:textSize="13sp" android:textStyle="bold" android:textColor="#212121"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" android:layout_marginBottom="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Remaining" android:textSize="12sp" android:textColor="#757575"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="R 2,405.00" android:textSize="13sp" android:textStyle="bold" android:textColor="#2E7D32"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Action buttons -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Back to Dashboard"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/bg_primary_button"
+            android:layout_marginTop="24dp"
+            android:contentDescription="Return to dashboard button"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Add Another Expense"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#2E7D32"
+            android:background="@drawable/bg_secondary_button"
+            android:layout_marginTop="10dp"
+            android:contentDescription="Add another expense button"/>
+
+    </LinearLayout>
+</LinearLayout>
