@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Error Prevention &amp; Reversal"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- PREVENTION: Disabled save button until fields filled -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prevention:"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginBottom="8dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/border_box"
+        android:layout_marginBottom="8dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/border_box"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Disabled button -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/border_box_dashed"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="^ Button disabled until valid"
+        android:textSize="9sp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- CONFIRMATION before destructive action -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmation:"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border_box"
+        android:padding="14dp"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete expense?"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:background="@drawable/border_box"
+                android:layout_marginEnd="6dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:background="@drawable/filled_box"
+                android:layout_marginStart="6dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- UNDO/REVERSAL -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Easy reversal:"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/border_box"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Expense deleted"
+            android:textSize="11sp"
+            android:textColor="#000000"/>
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/filled_box"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="^ Undo button shown"
+        android:textSize="9sp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:layout_marginTop="4dp"/>
+
+</LinearLayout>
