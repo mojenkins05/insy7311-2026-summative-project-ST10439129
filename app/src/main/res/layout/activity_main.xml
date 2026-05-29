@@ -15,5 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+    <!--
+        Rogers, Y., Sharp, H. and Preece, J. (2023) Interaction design: beyond human-computer interaction. 6th edn. Hoboken, NJ: Wiley.
+     -->
 </androidx.constraintlayout.widget.ConstraintLayout>
